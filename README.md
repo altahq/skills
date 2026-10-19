@@ -12,6 +12,7 @@ This plugin pairs the Alta connector, which gives Claude your Alta account's too
 | --- | --- |
 | Alta connector (`.mcp.json`) | Connects Claude to your Alta account through Alta's remote MCP server at `https://api.altahq.com/mcp`. |
 | [`campaign-creation`](skills/campaign-creation/SKILL.md) skill | Builds a draft outbound campaign end to end: audience, pitch, workflow, sending rep, launch. It pauses three times for your approval: after the audience, after the pitch, and after the workflow. |
+| [`plays/`](plays/README.md) | Alta's GTM plays, one `SKILL.md` each, run with the Alta connector or in Alta. Not loaded by the plugin yet. |
 
 ## Getting started
 
