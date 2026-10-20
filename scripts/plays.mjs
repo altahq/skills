@@ -2,20 +2,24 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const PlaysDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../plays');
-export const McpToolsFile = path.join(PlaysDir, 'mcp-tools.json');
+const ScriptsDir = path.dirname(fileURLToPath(import.meta.url));
+export const SkillsDir = path.resolve(ScriptsDir, '../skills');
+export const McpToolsFile = path.join(ScriptsDir, 'mcp-tools.json');
+// Skills in skills/ that are not plays, so they are not held to the play format.
+const NotPlays = ['campaign-creation'];
 export const ConnectorHeading = '## Run it with the Alta connector';
 export const ProductHeading = '## Run it in Alta';
 
 export function playSlugs() {
-  return readdirSync(PlaysDir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && existsSync(path.join(PlaysDir, entry.name, 'SKILL.md')))
+  return readdirSync(SkillsDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && existsSync(path.join(SkillsDir, entry.name, 'SKILL.md')))
+    .filter((entry) => !NotPlays.includes(entry.name))
     .map((entry) => entry.name)
     .sort();
 }
 
 export function readSkillMd(slug) {
-  return readFileSync(path.join(PlaysDir, slug, 'SKILL.md'), 'utf8');
+  return readFileSync(path.join(SkillsDir, slug, 'SKILL.md'), 'utf8');
 }
 
 export function sectionOf(skillMd, heading) {

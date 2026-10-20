@@ -1,8 +1,8 @@
 {
   "name": "alta",
   "displayName": "Alta",
-  "version": "1.0.0",
-  "description": "Build and launch outbound sales campaigns in Alta from a conversation: target an audience, generate the pitch and multi-channel workflow, pick the sending rep, and launch, using your Alta account's connector.",
+  "version": "1.1.0",
+  "description": "Run Alta's outbound and inbound GTM plays from a conversation: build audiences, write the pitch and multi-channel workflow, draft campaigns, and read your pipeline and campaign results, using your Alta account's connector.",
   "author": {
     "name": "Alta",
     "email": "support@altahq.com",

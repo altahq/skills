@@ -2,10 +2,10 @@ name: plays
 
 on:
   pull_request:
-    paths: ['plays/**', 'scripts/*plays*.mjs']
+    paths: ['skills/**', 'scripts/**']
   push:
     branches: [main]
-    paths: ['plays/**', 'scripts/*plays*.mjs']
+    paths: ['skills/**', 'scripts/**']
 
 jobs:
   check:
