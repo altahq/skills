@@ -59,3 +59,4 @@ The flow at a glance: **audience pause → pitch pause → workflow pause → la
 ## Tool availability
 
 Every tool named above is exposed by the Alta MCP server. Build the audience with `search_prospects`, or point the campaign at an existing audience via `create_audience` + `update_audience`.
+
