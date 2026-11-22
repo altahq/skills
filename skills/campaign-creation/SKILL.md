@@ -1,5 +1,5 @@
 ---
-name: campaign-creation
+name: campaign-creation-s2
 description: Build a draft outbound campaign in Alta end to end — audience, pitch, workflow, rep, launch. Use whenever the user wants to create, draft, set up, or modify an Alta campaign, and follow it before calling any campaign tool. Requires the Alta MCP server.
 ---
 
